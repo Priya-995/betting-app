@@ -1,37 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).\
-(https://betting-app-4hfi.vercel.app/) : Live Demo
+🎯 Betting Web Application (Technical Assessment)
 
-## Getting Started
+A full-stack React/Next.js web application built as part of the Full Stack Developer Intern Technical Assessment.
 
-First, run the development server:
+The project includes:
 
-```bash
+👤 User Website
+
+🛠 Admin Panel
+
+⚡ Secure backend APIs
+
+🗄 PostgreSQL database (Supabase)
+
+🚀 Deployed on Vercel
+
+🧑‍💻 Tech Stack
+Frontend
+
+Next.js 16 (App Router)
+
+React
+
+TypeScript
+
+Tailwind CSS
+
+Backend
+
+Next.js API Routes
+
+Supabase (PostgreSQL)
+
+RPC (Stored Procedures)
+
+Transaction-safe wallet deduction logic
+
+Deployment
+
+Vercel
+
+📌 Features
+👤 User Website
+
+View available markets
+
+Place bets (Single, Jodi, Panna types)
+
+Wallet balance handling
+
+API-integrated bet submission
+
+Responsive UI design
+
+🛠 Admin Panel
+
+Admin route structure
+
+Ready for result declaration logic
+
+Extendable backend architecture
+
+🔐 Backend Logic
+
+Atomic wallet deduction using PostgreSQL function
+
+Prevents race conditions
+
+Ensures transactional integrity
+
+Secure server-side Supabase service role usage
+
+Proper separation of UI, API, and database layers
+
+📂 Project Structure
+app/
+ ├── dashboard/
+ ├── bet/[marketId]/
+ ├── admin/
+ ├── api/
+ │    ├── bets/
+ │    ├── markets/
+components/
+lib/
+types/
+⚙️ Installation & Setup
+1️⃣ Clone the Repository
+git clone <your-repo-url>
+cd betting-app
+2️⃣ Install Dependencies
+npm install
+3️⃣ Environment Variables
+
+Create a .env.local file:
+
+NEXT_PUBLIC_SUPABASE_URL=your_url
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+
+⚠️ Do NOT expose service role key publicly.
+
+4️⃣ Run Development Server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+5️⃣ Production Build
+npm run build
+npm start
+📈 Scalability Note
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project is structured with scalability in mind:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Modular component architecture
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+API abstraction layer
 
-## Learn More
+Database logic centralized via RPC functions
 
-To learn more about Next.js, take a look at the following resources:
+Separation of concerns (UI / API / DB)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Easily extendable for:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Authentication
 
-## Deploy on Vercel
+Bet history
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Result declaration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Admin controls
+
+Real-time updates
+
+For production-level scaling:
+
+Add authentication (JWT / Supabase Auth)
+
+Implement rate limiting
+
+Add caching layer (Redis)
+
+Add pagination for large datasets
+
+Use connection pooling
+
+Add logging & monitoring
+
+🚀 Live Demo
+
+🔗 https://betting-app-4hfi.vercel.app/
