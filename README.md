@@ -1,146 +1,118 @@
-🎯 Betting Web Application (Technical Assessment)
+# 🎯 Betting Web Application (Technical Assessment)
 
-A full-stack React/Next.js web application built as part of the Full Stack Developer Intern Technical Assessment.
+A full-stack React/Next.js web application built as part of the **Full Stack Developer Intern Technical Assessment**.
 
 The project includes:
 
-👤 User Website
+- 👤 User Website  
+- 🛠 Admin Panel  
+- ⚡ Secure backend APIs  
+- 🗄 PostgreSQL database (Supabase)  
+- 🚀 Deployed on Vercel  
 
-🛠 Admin Panel
+---
 
-⚡ Secure backend APIs
+## 🧑‍💻 Tech Stack
 
-🗄 PostgreSQL database (Supabase)
+### Frontend
+- Next.js 16 (App Router)
+- React
+- TypeScript
+- Tailwind CSS
 
-🚀 Deployed on Vercel
+### Backend
+- Next.js API Routes
+- Supabase (PostgreSQL)
+- RPC (Stored Procedures)
+- Transaction-safe wallet deduction logic
 
-🧑‍💻 Tech Stack
-Frontend
+### Deployment
+- Vercel
 
-Next.js 16 (App Router)
+---
 
-React
+## 📌 Features
 
-TypeScript
+### 👤 User Website
+- View available markets
+- Place bets (Single, Jodi, Single Panna, Double Panna, Triple Panna)
+- Wallet balance handling
+- API-integrated bet submission
+- Fully responsive UI design
 
-Tailwind CSS
+### 🛠 Admin Panel
+- Structured admin routing
+- Ready for result declaration logic
+- Extendable backend architecture
 
-Backend
+---
 
-Next.js API Routes
+## 🔐 Backend Logic
 
-Supabase (PostgreSQL)
+- Atomic wallet deduction using PostgreSQL stored procedure
+- Prevents race conditions
+- Ensures transactional integrity
+- Secure server-side Supabase service role usage
+- Proper separation of UI, API, and database layers
 
-RPC (Stored Procedures)
+---
 
-Transaction-safe wallet deduction logic
-
-Deployment
-
-Vercel
-
-📌 Features
-👤 User Website
-
-View available markets
-
-Place bets (Single, Jodi, Panna types)
-
-Wallet balance handling
-
-API-integrated bet submission
-
-Responsive UI design
-
-🛠 Admin Panel
-
-Admin route structure
-
-Ready for result declaration logic
-
-Extendable backend architecture
-
-🔐 Backend Logic
-
-Atomic wallet deduction using PostgreSQL function
-
-Prevents race conditions
-
-Ensures transactional integrity
-
-Secure server-side Supabase service role usage
-
-Proper separation of UI, API, and database layers
-
-📂 Project Structure
+## 📂 Project Structure
 app/
- ├── dashboard/
- ├── bet/[marketId]/
- ├── admin/
- ├── api/
- │    ├── bets/
- │    ├── markets/
+├── dashboard/
+├── bet/
+𝑚
+𝑎
+𝑟
+𝑘
+𝑒
+𝑡
+𝐼
+𝑑
+marketId/
+├── admin/
+├── api/
+│ ├── bets/
+│ ├── markets/
 components/
 lib/
 types/
-⚙️ Installation & Setup
-1️⃣ Clone the Repository
-git clone <your-repo-url>
-cd betting-app
-2️⃣ Install Dependencies
-npm install
-3️⃣ Environment Variables
 
-Create a .env.local file:
+---
 
-NEXT_PUBLIC_SUPABASE_URL=your_url
-SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
-
-⚠️ Do NOT expose service role key publicly.
-
-4️⃣ Run Development Server
-npm run dev
-5️⃣ Production Build
-npm run build
-npm start
-📈 Scalability Note
+## 📈 Scalability Note
 
 This project is structured with scalability in mind:
 
-Modular component architecture
-
-API abstraction layer
-
-Database logic centralized via RPC functions
-
-Separation of concerns (UI / API / DB)
+- Modular component architecture
+- API abstraction layer
+- Database logic centralized via RPC functions
+- Clear separation of concerns (UI / API / DB)
 
 Easily extendable for:
+- Authentication integration
+- Bet history module
+- Result declaration logic
+- Admin controls & analytics
+- Real-time updates
 
-Authentication
+### For production-level scaling:
+- Implement authentication (JWT / Supabase Auth)
+- Add rate limiting
+- Introduce caching layer (Redis)
+- Add pagination for large datasets
+- Use connection pooling
+- Integrate logging & monitoring tools
 
-Bet history
+---
 
-Result declaration
-
-Admin controls
-
-Real-time updates
-
-For production-level scaling:
-
-Add authentication (JWT / Supabase Auth)
-
-Implement rate limiting
-
-Add caching layer (Redis)
-
-Add pagination for large datasets
-
-Use connection pooling
-
-Add logging & monitoring
-
-🚀 Live Demo
+## 🚀 Live Demo
 
 🔗 https://betting-app-4hfi.vercel.app/
+
+---
+
+## 👩‍💻 Author
+
+**Priya Singh**  
+Full Stack Developer (React / Node / PostgreSQL)
